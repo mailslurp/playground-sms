@@ -41,5 +41,5 @@ const signUpConfig = {
 
 export default withAuthenticator(App, {
   includeGreetings: true,
-  signUpConfig,
+  signUpConfig
 });

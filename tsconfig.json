@@ -18,7 +18,8 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": false
+    "strict": false,
+    "types": ["jest"]
   },
   "include": [
     "src"

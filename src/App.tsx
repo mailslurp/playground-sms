@@ -24,13 +24,6 @@ const signUpConfig = {
   signUpFields: [
     {
       label: 'Username',
-      key: 'username',
-      required: true,
-      displayOrder: 0,
-      type: 'string'
-    },
-    {
-      label: 'Phone',
       key: 'phone_number',
       required: true,
       displayOrder: 1,

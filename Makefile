@@ -12,5 +12,5 @@ build: test
 
 deploy: build
 	npx s3-website deploy
-	npx cloudfront-invalidate-cli -- E3CKNIFCK1W63Z /\* 
+	npx cloudfront-invalidate-cli -- E1AXSDDKI9HE0H /\* 
 

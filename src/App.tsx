@@ -1,14 +1,13 @@
 import './App.css';
 import React, { Component } from 'react';
 import { withAuthenticator } from 'aws-amplify-react';
-import Amplify from 'aws-amplify';
 import setup from "./setup";
 import welcome from './welcome.jpg'
 setup();
 
 class App extends Component {
   render() {
-    const style = {'text-align':'center', 'padding-top': '20px'};
+    const style: any = {textAlign:'center', paddingTop: '20px'};
     return (
       <div style={style}>
         <h1>Welcome</h1>

@@ -1,14 +1,22 @@
+NODE_VERSION=$(shell node --version)
+ifneq (,$(findstring v18, $(NODE_VERSION)))
+NODE_OPTIONS=--openssl-legacy-provider
+else
+NODE_OPTIONS=
+endif
+
+ 
 node_modules:
-	npm install
+	NODE_OPTIONS=$(NODE_OPTIONS) npm install
 
 dev: node_modules
-	npm start
+	NODE_OPTIONS=$(NODE_OPTIONS) npm start
 
 test: node_modules
-	npm run test
+	NODE_OPTIONS=$(NODE_OPTIONS) npm run test
 
 build: test
-	npm run build
+	NODE_OPTIONS=$(NODE_OPTIONS) npm run build
 
 deploy: build
 	npx s3-website deploy
